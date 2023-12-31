@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head.ejs') %>
+    <body>
+        <div class="container">
+            <div class="row justify-content-center mt-4">
+                <h1 class="text-center">Create Comment</h1>
+                <form class="border p-3 col-md-6 rounded" action="/comments" method="post">
+                    <div class="form-group mb-3">
+                        <label for="username" class="form-label">Username</label>
+                        <input
+                            type="text"
+                            name="username"
+                            class="form-control"
+                            id="username"
+                            aria-describedby="usernameHelp"
+                            required
+                        />
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="floatingTextarea">Comments</label>
+                        <textarea
+                            class="form-control"
+                            name="text"
+                            placeholder="Leave a comment here"
+                            id="floatingTextarea"
+                            required
+                        ></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-success">Submit</button>
+                    <a class="btn btn-secondary" href="/comments" role="button">Back to Comments</a>
+                </form>
+            </div>
+        </div>
+        <script src="/bootstrap/js/bootstrap.min.js"></script>
+    </body>
+</html>
